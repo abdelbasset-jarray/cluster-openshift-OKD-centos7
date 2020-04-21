@@ -1,7 +1,7 @@
 How-to-install OpenShift Origin (OKD) Cluster on CentOS 7
 
 1- Prérequis
-
+   - Git
 2- VMs provisionnées
 Name	              IP	        OS	    RAM	CPU
 okd-master-node	  100.10.30.100	CentOS7	4GB	4
@@ -29,7 +29,7 @@ Nous pouvons vérifier l'état en exécutant la commande ci-dessous: $ sestatus
 Redémarrez tous les nœuds master/worker/infra nodes:  $ reboot
 
 Étape 4:
-
+Extraire le code (git clone https://github.com/abdoujarray/cluster-openshift-OKD-centos7.git ) 
 Configurer le fichier settings.sh
 
 Étape 5:
