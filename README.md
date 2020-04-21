@@ -4,11 +4,11 @@ How-to-install OpenShift Origin (OKD) Cluster on CentOS 7
    - Git
 2- VMs provisionnées
 Name	                IP	        OS	RAM	CPU
-okd-master-node	        100.10.30.100	CentOS7	4GB	4
-okd-worker-node-1	100.10.30.101	CentOS7	4GB	4
-okd-worker-node-2	100.10.30.102	CentOS7	4GB	4
-okd-worker-node-3	100.10.30.103	CentOS7	2GB	4
-okd-infra-node-1	100.10.30.104	CentOS7	2GB	4
+okd-master-node	        100.10.33.100	CentOS7	4GB	2
+okd-worker-node-1	100.10.33.101	CentOS7	4GB	2
+okd-worker-node-2	100.10.33.102	CentOS7	4GB	2
+okd-worker-node-3	100.10.33.103	CentOS7	2GB	2
+okd-infra-node-1	100.10.33.104	CentOS7	2GB	2
 
 3- Déployer le cluster OpenShift:
 
@@ -47,7 +47,7 @@ Exécutez le script ci-dessous sur tous master/worker/infra nodes : $ cluster-op
 
 Activez SSH pour communiquer tous les autres "worker/infra nodes" de "master" sans "password". Toutes les commandes ci-dessous doivent être exécutées uniquement sur le nœud "master".
 
-- 100.10.30.101 (okd-master-node)
+- 100.10.33.101 (okd-master-node)
  
   $ ssh-keygen -t rsa
 
