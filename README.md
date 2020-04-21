@@ -53,28 +53,28 @@ Activez SSH pour communiquer tous les autres "worker/infra nodes" de "master" sa
 
 - okd-master-node
 
-   $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.100 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+   $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.33.100 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-worker-node-1
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.101 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.33.101 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-worker-node-2
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.102 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.33.102 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-worker-node-3
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.103 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.33.103 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-infra-node-4
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.104 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.33.104 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 		
 
 ** Exécuter le script ci-dessous uniquement sur le nœud master:
 
-    100.10.30.101 (okd-master-node)
+    100.10.33.100 (okd-master-node)
 		
   	$ cluster-openshift-OKD-centos7/install_master.sh
 
