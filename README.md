@@ -3,8 +3,8 @@ How-to-install OpenShift Origin (OKD) Cluster on CentOS 7
 1- Prérequis
    - Git
 2- VMs provisionnées
-Name	              IP	        OS	    RAM	CPU
-okd-master-node	  100.10.30.100	CentOS7	4GB	4
+Name	                IP	        OS	RAM	CPU
+okd-master-node	        100.10.30.100	CentOS7	4GB	4
 okd-worker-node-1	100.10.30.101	CentOS7	4GB	4
 okd-worker-node-2	100.10.30.102	CentOS7	4GB	4
 okd-worker-node-3	100.10.30.103	CentOS7	2GB	4
@@ -47,33 +47,34 @@ Exécutez le script ci-dessous sur tous master/worker/infra nodes : $ cluster-op
 
 Activez SSH pour communiquer tous les autres "worker/infra nodes" de "master" sans "password". Toutes les commandes ci-dessous doivent être exécutées uniquement sur le nœud "master".
 
-- 100.10.10.101 (okd-master-node)
+- 100.10.30.101 (okd-master-node)
  
   $ ssh-keygen -t rsa
 
 - okd-master-node
 
-   $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.10.100 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+   $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.100 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-worker-node-1
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.10.101 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.101 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-worker-node-2
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.10.102 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.102 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-worker-node-3
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.10.103 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.103 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 
 - okd-infra-node-4
 
-    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.10.104 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    $ cat ~/.ssh/id_rsa.pub | ssh root@100.10.30.104 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 		
 
 ** Exécuter le script ci-dessous uniquement sur le nœud master:
-    100.10.10.101 (okd-master-node)
+
+    100.10.30.101 (okd-master-node)
 		
   	$ cluster-openshift-OKD-centos7/install_master.sh
 
