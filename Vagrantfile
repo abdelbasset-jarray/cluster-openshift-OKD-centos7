@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   # Cluster okd master node
-  config.vm.define "okd-master-node" do |okd-master|
+  config.vm.define "okd-master-node" do |master|
     okd-master.vm.box = "centos/7"
     okd-master.vm.hostname = "okd-master-node"
     okd-master.vm.box_url = "centos/7"
@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Cluster okd-worker1-node
-  config.vm.define "okd-worker1-node" do |okd-worker1|
+  config.vm.define "okd-worker1-node" do |worker1|
     okd-master.vm.box = "centos/7"
     okd-master.vm.hostname = "okd-worker1-node"
     okd-master.vm.box_url = "centos/7"
@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
   end
 
     # Cluster okd-worker2-node
-  config.vm.define "okd-worker2-node" do |okd-worker2|
+  config.vm.define "okd-worker2-node" do |worker2|
     okd-worker2.vm.box = "centos/7"
     okd-worker2.vm.hostname = "okd-worker2-node"
     okd-worker2.vm.box_url = "centos/7"
@@ -63,7 +63,7 @@ Vagrant.configure("2") do |config|
   end
 
     # Cluster okd worker3 node
-  config.vm.define "okd-worker3-node" do |okd-worker3|
+  config.vm.define "okd-worker3-node" do |worker3|
     okd-worker3.vm.box = "centos/7"
     okd-worker3.vm.hostname = "okd-worker3-node"
     okd-worker3.vm.box_url = "centos/7"
@@ -83,7 +83,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Cluster okd infra node
-  config.vm.define "okd-infra-node" do |okd-infra|
+  config.vm.define "okd-infra-node" do |infra|
     okd-infra.vm.box = "centos/7"
     okd-infra.vm.hostname = "okd-infra-node"
     okd-infra.vm.box_url = "centos/7"
