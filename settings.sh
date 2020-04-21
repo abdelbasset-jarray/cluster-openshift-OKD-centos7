@@ -11,19 +11,19 @@ export OKD_MASTER_HOSTNAME=okd-master-node
 
 #OKD Worker Node 1 Configuration
 export OKD_WORKER_NODE_1_IP=100.10.33.101
-export OKD_WORKER_NODE_1_HOSTNAME=okd-worker-node-1
+export OKD_WORKER_NODE_1_HOSTNAME=okd-worker1-node
 
 #OKD Worker Node 2 Configuration
 export OKD_WORKER_NODE_2_IP=100.10.33.102
-export OKD_WORKER_NODE_2_HOSTNAME=okd-worker-node-2
+export OKD_WORKER_NODE_2_HOSTNAME=okd-worker2-node
 
 #OKD Worker Node 3 Configuration
 export OKD_WORKER_NODE_3_IP=100.10.33.103
-export OKD_WORKER_NODE_3_HOSTNAME=okd-worker-node-3
+export OKD_WORKER_NODE_3_HOSTNAME=okd-worker3-node
 
 #OKD Infra Node 1 Configuration
 export OKD_INFRA_NODE_1_IP=100.10.33.104
-export OKD_INFRA_NODE_1_HOSTNAME=okd-infra-node-1
+export OKD_INFRA_NODE_1_HOSTNAME=okd-infra-node
 
 #The  below setting will be used to access OKD console https://console.$DOMAIN:$API_PORT"
 #By default we can login using the URL https://console.okd.abdoujarray.com:8443
