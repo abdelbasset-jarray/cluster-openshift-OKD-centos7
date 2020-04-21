@@ -8,7 +8,9 @@ okd-master-node	        100.10.33.100	CentOS7	4GB	2
 okd-worker-node-1	100.10.33.101	CentOS7	4GB	2
 okd-worker-node-2	100.10.33.102	CentOS7	4GB	2
 okd-worker-node-3	100.10.33.103	CentOS7	2GB	2
-okd-infra-node-1	100.10.33.104	CentOS7	2GB	2
+okd-infra-node  	100.10.33.104	CentOS7	2GB	2
+
+$ vagrant up 
 
 3- Déployer le cluster OpenShift:
 
